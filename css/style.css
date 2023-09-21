@@ -1,0 +1,37 @@
+* {
+  background-color: rgb(221, 255, 241);
+}
+
+.color1 {
+  color: #ff0093;
+}
+.color2 {
+  color: #ff354c;
+}
+.color3 {
+  color: #ff8c26;
+}
+.color4 {
+  color: #e4c440;
+}
+.color5 {
+  color: #b4e372;
+}
+
+.cabecalho {
+  background-color: #409ef7;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.rodape {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
