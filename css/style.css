@@ -1,37 +1,85 @@
+@font-face { font-family: Kodchasan; src: url('fonts/Kodchasan-Regular.ttf'); } 
+@font-face { font-family: ChalkPaint; src: url('fonts/ChalkPaint.ttf'); } 
+
 * {
   background-color: rgb(221, 255, 241);
 }
 
-.color1 {
-  color: #ff0093;
-}
-.color2 {
-  color: #ff354c;
-}
-.color3 {
-  color: #ff8c26;
-}
-.color4 {
-  color: #e4c440;
-}
-.color5 {
-  color: #b4e372;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.cabecalho {
-  background-color: #409ef7;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.rodape {
-  background-color: grey;
+nav {
+  background-color: #16C031;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  height: 100px;
+}
+
+.nav-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+  padding-inline: 20px;
+  height: 100%;
+}
+.nav-items a:hover{
+  background-color:darkblue;
   color: white;
-  padding: 10px;
+}
+.nav-items a:hover p{
+  color: white;
+}
+
+nav p {
+  background-color: inherit;
+  font-family: 'Kodchasan';
+}
+
+nav h1{
+  font-family: 'ChalkPaint';
+  white-space: nowrap;
+  background-color: inherit;
+  color:white;
+  font-size: 30px;
+}
+
+nav a {
+  display: flex;
+  height: 100%;
+  padding-inline: 20px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+#logo{
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  gap: 10px;
+  background-color: inherit;
+}
+
+#logo img{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: inherit;
 }
