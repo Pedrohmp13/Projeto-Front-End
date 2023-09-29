@@ -7,17 +7,13 @@
   src: url("/fonts/ChalkPaint.ttf");
 }
 
-* {
-  background-color: rgb(221, 255, 241);
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-image: linear-gradient(135deg, #46eb57, #8cf974, #3ff567, #3bfe95);
 }
 
 .container {
@@ -25,9 +21,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .container2 {
-  text-align: center;
-  background-image: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 div h1 {
@@ -61,12 +62,12 @@ div p {
 }
 
 .content {
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  background-image: linear-gradient(135deg, #46eb57, #8cf974, #3ff567, #3bfe95);
+  background-color: transparent;
 }
 
 .content p {
@@ -152,6 +153,7 @@ footer {
   padding: 10px;
   padding-inline: 100px;
   height: 100px;
+  background-color: white;
 }
 
 footer img {
@@ -174,15 +176,14 @@ h1 {
   background-color: #16c031;
   color: white;
   text-align: center;
-  position: relative;
   height: 40px;
-  width: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 5%;
 }
 .caixa-topo p {
   font-family: "Kodchasan";
@@ -190,7 +191,7 @@ h1 {
 }
 
 .curso-box {
-  width: 30%;
+  width: 20%;
   display: inline-block;
   margin: 0 1.5%;
   text-align: center;
@@ -214,4 +215,64 @@ h1 {
 }
 .curso-lista li {
   background-color: inherit;
+}
+
+.ex-box {
+  width: 15%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #000;
+}
+.ex-titulo {
+  font-size: 12px;
+  background-color: inherit;
+}
+
+#cursosbox {
+  margin-top: 10px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exbox {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exH {
+  background-color: transparent;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 5%;
+}
+
+.containerEX {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.containerCURSOS {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
