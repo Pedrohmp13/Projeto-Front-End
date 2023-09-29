@@ -13,7 +13,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(135deg, #46eb57, #8cf974, #3ff567, #3bfe95);
+  background-image: linear-gradient(135deg, #46eb57, #8cf974, #46ff6e, #3bfe95);
 }
 
 .container {
@@ -275,4 +275,14 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.contato{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 50%;
+  font-size: 24px;
 }
