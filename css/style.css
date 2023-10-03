@@ -6,6 +6,10 @@
   font-family: ChalkPaint;
   src: url("/fonts/ChalkPaint.ttf");
 }
+@font-face {
+  font-family: KirangHaerang;
+  src: url("/fonts/KirangHaerang-Regular.ttf");
+}
 
 html,
 body {
@@ -18,7 +22,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-}
 
 .figura img {
   width: 100%;
@@ -145,7 +148,6 @@ footer {
   padding: 10px;
   padding-inline: 100px;
   height: 100px;
-
   background-color: white;
 }
 
@@ -168,15 +170,14 @@ footer p, footer h1 {
   background-color: #16c031;
   color: white;
   text-align: center;
-  position: relative;
   height: 40px;
-  width: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 5%;
 }
 .caixa-topo p {
   font-family: "Kodchasan";
@@ -184,7 +185,7 @@ footer p, footer h1 {
 }
 
 .curso-box {
-  width: 30%;
+  width: 20%;
   display: inline-block;
   margin: 0 1.5%;
   text-align: center;
@@ -208,4 +209,93 @@ footer p, footer h1 {
 }
 .curso-lista li {
   background-color: inherit;
+}
+
+.ex-box {
+  width: 15%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #000;
+}
+.ex-titulo {
+  font-size: 12px;
+  background-color: inherit;
+}
+
+#cursosbox {
+  margin-top: 10px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exbox {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exH {
+  background-color: transparent;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 5%;
+}
+
+.containerEX {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.containerCURSOS {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contato{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  height: 100%;
+  font-size: 24px;
+}
+
+.contato p,h2{
+  font-size: 33px;
+  font-family: "KirangHaerang";
+  font-size: 40px;
+}
+
+.contato input, textarea{
+  font-family: "Kodchasan";
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding-left: 10px;
+}
+.contato textarea{
+  height: 100px;
+  resize: none;
 }
