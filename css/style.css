@@ -1,14 +1,16 @@
 @font-face {
   font-family: Kodchasan;
-  src: url("/fonts/Kodchasan-Regular.ttf");
+  src: url("../fonts/Kodchasan-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 @font-face {
   font-family: ChalkPaint;
-  src: url("/fonts/ChalkPaint.ttf");
+  src: url("../fonts/ChalkPaint.ttf") format('truetype');
 }
 @font-face {
   font-family: KirangHaerang;
-  src: url("/fonts/KirangHaerang-Regular.ttf");
+  src: url("../fonts/KirangHaerang-Regular.ttf") format('truetype');
 }
 
 html,
