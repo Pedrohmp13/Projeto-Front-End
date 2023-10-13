@@ -1,16 +1,16 @@
 @font-face {
   font-family: Kodchasan;
-  src: url("../fonts/Kodchasan-Regular.ttf") format('truetype');
+  src: url("../fonts/Kodchasan-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: ChalkPaint;
-  src: url("../fonts/ChalkPaint.ttf") format('truetype');
+  src: url("../fonts/ChalkPaint.ttf") format("truetype");
 }
 @font-face {
   font-family: KirangHaerang;
-  src: url("../fonts/KirangHaerang-Regular.ttf") format('truetype');
+  src: url("../fonts/KirangHaerang-Regular.ttf") format("truetype");
 }
 
 html,
@@ -39,11 +39,17 @@ body {
   flex-grow: 1;
   align-items: center;
   width: 100%;
-  background-image: linear-gradient(135deg, #46eb57, #8cf974, #3ff567, #3bfe95 150%);
+  background-image: linear-gradient(
+    135deg,
+    #46eb57,
+    #8cf974,
+    #3ff567,
+    #3bfe95 150%
+  );
   background-repeat: no-repeat;
 }
 
-.content .home{
+.content .home {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -61,14 +67,15 @@ body {
   max-width: 500px;
 }
 
-#content_image{
+#content_image {
   width: 400px;
   height: auto;
 }
 
-.texto p, .texto h1{
+.texto p,
+.texto h1 {
   text-align: center;
-  font-family: 'Kodchasan';
+  font-family: "Kodchasan";
 }
 
 #textotitulo {
@@ -103,7 +110,7 @@ nav {
   background-color: inherit;
   padding-inline: 20px;
   width: 70%;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
 nav a {
@@ -139,7 +146,6 @@ header a {
   color: black;
   text-decoration: none;
   background-color: inherit;
-  
 }
 
 nav a:hover {
@@ -176,7 +182,8 @@ footer img {
   height: 80px;
 }
 
-footer p, footer h1 {
+footer p,
+footer h1 {
   font-family: "Kodchasan";
   font-size: 12px;
   background-color: inherit;
@@ -291,7 +298,7 @@ footer p, footer h1 {
   justify-content: flex-start;
 }
 
-.contato{
+.contato {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -301,13 +308,15 @@ footer p, footer h1 {
   font-size: 24px;
 }
 
-.contato p,h2{
+.contato p,
+h2 {
   font-size: 33px;
   font-family: "KirangHaerang";
   font-size: 40px;
 }
 
-.contato input, textarea{
+.contato input,
+textarea {
   font-family: "Kodchasan";
   width: 300px;
   height: 40px;
@@ -315,7 +324,94 @@ footer p, footer h1 {
   border: 1px solid #000;
   padding-left: 10px;
 }
-.contato textarea{
+.contato textarea {
   height: 100px;
   resize: none;
+}
+
+.slideshow-container {
+  width: 40%;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+}
+
+.slide {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-20%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-40%);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-60%);
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-80%);
+}
+
+#textovideoaula {
+  font-size: 15px;
+  font-family: "Kodchasan";
+  background-color: transparent;
+  display: flex;
+  align-items: right;
+  margin-left: 440px;
+}
+
+.containerVD {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.search-container {
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+.search-container h3 {
+  text-align: inherit;
+  font-family: "Kodchasan";
+}
+
+.search-container input[type="text"] {
+  width: 500px;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.textovd {
+  flex: 1;
+  min-width: 50%;
+  max-width: 100px;
 }
