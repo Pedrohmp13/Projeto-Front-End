@@ -200,7 +200,7 @@ footer h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .caixa-topo {
@@ -221,14 +221,13 @@ footer h1 {
 }
 
 .curso-box {
-  width: 300px;
+  width: 250px;
   height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  border: 1px solid #ddd;
+  margin-inline: 20px;
   padding: 10px;
   margin-bottom: 20px;
   background-color: white;
