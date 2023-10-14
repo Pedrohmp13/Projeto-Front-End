@@ -1,0 +1,30 @@
+Relatório sobre Projeto 1 de FrontEnd
+	Álvaro Henrique Nunes de Lima	- 2142520
+	Lucas Cardinot da Silva			- 2144298
+	Pedro Henrique Mendes de Paula	- 2142708
+
+Objetivo
+Oferecer ferramentas educacionais para vestibulandos, onde através do site poderão encontrar diversas formas de estudar e aprender para ir bem em um vestibular. Além disso, poderão aproveitar
+de todos os conteúdos como videoaulas, cursos, exercícios e também informações básicas sobre os assuntos mais frequentes em provas.
+Em cada página do site será possível o vestibulando estudar de maneiras diferentes, estudando através de cursos, de videoaulas, de exercícios, e além disso saber sobre informações
+importantes sobre os vestibulares. Por fim, o usuário poderá entrar em contato através de um formulário escrevendo suas dúvidas e perguntas para os administradores.
+
+O site possui telas como:
+•	Tela Inicial;
+•	Tela de Cursos;
+•	Tela de Videoaulas;
+•	Tela de Exercícios;
+•	Tela de Vestibulares;
+•	Tela de Contato.
+
+E as atividades foram desenvolvidas das seguintes maneiras:
+•	Cabeçalho e rodapé: Álvaro;
+•	Página Inicial: Álvaro;
+•	Página de Cursos: Pedro;
+•	Página de Videoaulas: Pedro;
+•	Página de Exercícios: Pedro;
+•	Página de Vestibulares: Álvaro;
+•	Página de Contato: Lucas;
+•	Imagens: Pedro;
+•	Ajustes finos de designer: Lucas, Álvaro;
+•	Relatório: Lucas.

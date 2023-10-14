@@ -206,7 +206,7 @@ footer h2 {
 
 .caixa-topo {
   background-color: #16c031;
-  color: white;
+  color: rgb(0, 0, 0);
   height: 40px;
   width: 80%;
   display: flex;
