@@ -6,6 +6,7 @@
   <title>Educa Cuca</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../img/favicon-16x16.png" type="image/x-icon">
+
 </head>
 
 <body class="container">
@@ -46,22 +47,17 @@
     <div class="contato">
       <div>
         <h2>Entre em contato abaixo:</h2>
-           
-        <form href="../pages/contato.html">
 
+        <form id="formContato" onsubmit="return addElemento();">
           <input type="text" id="nome" name="nome" required placeholder="Nome"><br><br>
-        
           <input type="email" id="email" name="email" required placeholder="Email"><br><br>
-        
           <input type="tel" id="telefone" name="telefone" required placeholder="Telefone"><br><br>
-        
           <textarea id="Mensagem" name="Mensagem" rows="4" cols="50" required placeholder="Mensagem"></textarea><br><br>
-        
-          <input type="submit" value="Enviar">
-
+          <input type="submit" value="Enviar"><br><br>
+          <input type="submit" value="Limpar Formulário" onclick="limparFormulario()">
         </form>
       </div>
-        
+
       <h2>OU</h2>
 
       <div>
@@ -69,6 +65,17 @@
         <p>Educacuca@utfpr.edu.br</p>
       </div>
     </div>
+    <div>
+      <h2>Lista de contato</h2>
+      <h3>Aqui será listada as informações de contato enviadas nesta página!</h3>
+      <input type="text" id="caixaPesquisa" placeholder="Pesquisar...">
+      <button id="botaoPesquisar" onclick="pesquisarLista()">Pesquisar</button>
+      <button id="botaoCancelar" onclick="cancelarPesquisa()">Cancelar Pesquisa</button>
+      <ul id="itemListaTarefas"></ul>
+      <button class="clear-button" onclick="limparLista()">Limpar Lista</button>
+    </div>
+
+    <script src="../script/script.js"></script>
   </section>
 
   <footer>
@@ -86,7 +93,6 @@
       <p>ODSBrasil.gov.br</p>
     </section>
   </footer>
-
 </body>
 
 </html>
