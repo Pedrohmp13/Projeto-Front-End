@@ -234,7 +234,7 @@ footer h2 {
   background-color: white;
   border: 3px solid #000;
   border-radius: 10px;
-  font-family: 'Kodchasan';
+  font-family: "Kodchasan";
 }
 
 .curso-titulo {
@@ -245,7 +245,7 @@ footer h2 {
   padding: 0px;
 }
 
-.curso-lista li{
+.curso-lista li {
   text-align: left;
   font-size: 15px;
   margin: 0px;
@@ -265,9 +265,9 @@ footer h2 {
   background-color: white;
   border: 1px solid #000;
   border-radius: 5px;
-  font-family: 'Kodchasan';
+  font-family: "Kodchasan";
 }
-.ex-box:hover{
+.ex-box:hover {
   background-color: blue;
   border: 1px solid #ffffff;
   color: white;
@@ -286,7 +286,7 @@ footer h2 {
 
 #exH {
   background-color: transparent;
-  font-family: 'Kodchasan';
+  font-family: "Kodchasan";
 }
 
 .containerEX {
@@ -310,13 +310,15 @@ footer h2 {
   font-size: 24px;
 }
 
-.contato p, .contato h2 {
+.contato p,
+.contato h2 {
   font-size: 33px;
   font-family: "KirangHaerang";
   font-size: 40px;
 }
 
-.contato input, .contato textarea {
+.contato input,
+.contato textarea {
   font-family: "Kodchasan";
   width: 300px;
   height: 40px;
@@ -329,7 +331,7 @@ footer h2 {
   resize: none;
 }
 
-#cttemail{
+#cttemail {
   display: flex;
   justify-content: space-around;
 }
@@ -351,14 +353,14 @@ footer h2 {
   margin: 20px;
 }
 
-#videos{
+#videos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 500px;
 }
-#videos iframe{
+#videos iframe {
   width: 400px;
   height: 300px;
 }
@@ -382,38 +384,75 @@ footer h2 {
   box-sizing: border-box;
 }
 
-.vestibular{
+.vestibular {
   height: 100%;
   width: 80%;
   margin: 20px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  font-family: 'Kodchasan';
+  font-family: "Kodchasan";
   text-align: center;
 
   border: 1px solid green;
   border-radius: 20px;
 }
 
-.vestibular #title{
+.vestibular #title {
   font-size: 30px;
-  color:white;
-  text-shadow: -1px 3px 8px rgba(0,0,0,0.6);
-  width:fit-content;
+  color: white;
+  text-shadow: -1px 3px 8px rgba(0, 0, 0, 0.6);
+  width: fit-content;
   padding-left: 50px;
   border-radius: 20px;
 }
 
-.materias{
+.materias {
   display: flex;
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
 }
 
-.materias ol, .materias ul{
+.materias ol,
+.materias ul {
   width: 200px;
   margin: 40px;
   padding: 0px;
+}
+
+/* Estilos para a lista */
+ul#itemListaTarefas li {
+  position: relative;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+ul#itemListaTarefas li .close {
+  margin-left: auto;
+  padding: 4px;
+  cursor: pointer;
+  color: #000;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+}
+
+ul#itemListaTarefas li .close:hover {
+  background-color: #ddd;
+}
+
+ul#itemListaTarefas li span {
+  margin-right: 8px;
+}
+
+.clear-button {
+  display: block;
+  margin: 10px auto;
+}
+.escondido {
+  display: none;
 }
