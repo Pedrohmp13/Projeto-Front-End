@@ -436,15 +436,19 @@ ul#itemLista li {
 
 ul#itemLista li .close {
   margin-left: auto;
-  padding: 4px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   cursor: pointer;
   color: #000;
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  width: 40px;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 9px;
 }
 
 ul#itemLista li .close:hover {
-  background-color: #ddd;
+  background-color: green;
+  color: white;
 }
 
 ul#itemLista li span {
