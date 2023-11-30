@@ -425,11 +425,18 @@ footer h2 {
 ul#itemLista li {
   position: relative;
   background-color: #f2f2f2;
-  border: 1px solid #ddd;
+  border: 1px solid black;
+  border-radius: 8px;
   margin-bottom: 8px;
   padding: 8px;
   display: flex;
   align-items: center;
+  margin-left: -40px;
+  overflow: hidden;
+}
+
+ul#itemListaTarefas p {
+  overflow: hidden;
 }
 
 ul#itemLista li .close {
@@ -450,9 +457,62 @@ ul#itemLista li span {
 }
 
 .clear-button {
-  display: block;
-  margin: 10px auto;
+  font-family: "Kodchasan";
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding-left: 10px;
 }
+
+#limpa{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+#botaoPesquisar, #botaoCancelar{
+  font-family: "Kodchasan";
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding-left: 10px;
+}
+
+#barraPesquisa{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#caixaPesquisa {
+  font-family: "Kodchasan";
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
 .escondido {
   display: none;
+}
+
+#containerLista {
+  font-family: "Kodchasan";
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 20px;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+#listadeContato {
+  font-family: "Kodchasan";
+  font-size: 35px;
 }
