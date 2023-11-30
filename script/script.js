@@ -151,7 +151,7 @@ function pesquisarLista() {
   itensLista.forEach((item) => {
     let textoItem = item.innerText.toLowerCase();
     if (textoItem.includes(termoPesquisa)) {
-      item.style.display = "block";
+      item.style.display = "flex";
       itemNaoEncontrado = false;
     } else {
       item.style.display = "none";
@@ -177,7 +177,7 @@ function cancelarPesquisa() {
   let itensLista = document.querySelectorAll("#itemLista li");
 
   itensLista.forEach((item) => {
-    item.style.display = "block";
+    item.style.display = "flex";
   });
 
   document.getElementById("caixaPesquisa").value = "";

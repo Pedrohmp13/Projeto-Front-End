@@ -432,11 +432,6 @@ ul#itemLista li {
   display: flex;
   align-items: center;
   margin-left: -40px;
-  overflow: hidden;
-}
-
-ul#itemListaTarefas p {
-  overflow: hidden;
 }
 
 ul#itemLista li .close {
