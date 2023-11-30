@@ -1,15 +1,12 @@
-// Função para obter os dados da lista do localStorage
 function getListaFromLocalStorage() {
   let lista = JSON.parse(localStorage.getItem("contato")) || [];
   return lista;
 }
 
-// Função para salvar a lista no localStorage
 function salvarListaNoLocalStorage(lista) {
   localStorage.setItem("contato", JSON.stringify(lista));
 }
 
-// Função para adicionar um item à lista na página
 function adicionarItemNaPagina(item) {
   let li = document.createElement("li");
   li.className = "lista-tarefas";
@@ -18,13 +15,11 @@ function adicionarItemNaPagina(item) {
   );
   li.appendChild(dateText);
 
-  // Adicionar o botão de fechar ao item
   let span = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
 
-  // Adicionar um identificador único ao botão
   let uniqueId = "closeBtn_" + item.id;
   span.id = uniqueId;
 
@@ -38,17 +33,13 @@ function adicionarItemNaPagina(item) {
 
   li.appendChild(span);
 
-  // Adicionar um identificador único ao item
   li.id = "item_" + item.id;
   li.setAttribute("data-id", item.id);
 
-  // Adicionar o item à lista de contato na página
   document.getElementById("itemLista").appendChild(li);
 }
 
-// Função para adicionar um botão de fechar a um item existente
 function adicionarBotaoFechar(item, id) {
-  // Verifica se o botão já foi adicionado
   if (!item.querySelector(".close")) {
     let span = document.createElement("SPAN");
     let txt = document.createTextNode("\u00D7");
@@ -65,12 +56,11 @@ function adicionarBotaoFechar(item, id) {
   }
 }
 
-// Adiciona a função addElemento para adicionar novos itens à lista quando o botão "Incluir" é clicado
 function addElemento() {
   let nome = document.getElementById("nome").value;
   let telefone = document.getElementById("telefone").value;
   let li = document.createElement("li");
-  let inputValue = document.getElementById("Mensagem").value; // Corrigir o ID do campo de entrada
+  let inputValue = document.getElementById("Mensagem").value;
   let currentDate = new Date();
   let formattedDate = currentDate.toLocaleDateString("pt-Br");
   let dateText = document.createTextNode(
@@ -83,10 +73,8 @@ function addElemento() {
   let t = document.createTextNode(inputValue.toUpperCase());
   li.appendChild(t);
 
-  // Obter a lista atual do localStorage
   let lista = getListaFromLocalStorage();
 
-  // Adicionar a novo contato à lista
   let novoItem = {
     id: new Date().getTime(),
     descricao: inputValue.toUpperCase(),
@@ -96,38 +84,32 @@ function addElemento() {
   };
   lista.push(novoItem);
 
-  // Atualizar a lista no localStorage
   salvarListaNoLocalStorage(lista);
 
-  // Adicionar o novo item à página
   if (inputValue === "") {
     alert("Você precisa descrever o item");
   } else {
     adicionarItemNaPagina(novoItem);
   }
 
-  // Limpar o campo de entrada após adicionar o item
   document.getElementById("Mensagem").value = "";
 
-  return false; // Evita que o formulário seja enviado
+  return false;
 }
-// Carregar dados da lista do localStorage ao carregar a página
+
 document.addEventListener("DOMContentLoaded", function () {
   let lista = getListaFromLocalStorage();
 
-  // Adicionar itens da lista ao HTML
   for (let i = 0; i < lista.length; i++) {
     adicionarItemNaPagina(lista[i]);
   }
 
-  // Adicionar botão de fechar para os itens iniciais
   let itensIniciais = document.querySelectorAll("#itemLista li");
   itensIniciais.forEach((item) => {
     adicionarBotaoFechar(item, item.getAttribute("data-id"));
   });
 });
 
-// Cria um botão "Limpar Lista" que remove todos os itens da lista
 function limparLista() {
   let list = document.getElementById("itemLista");
   while (list.firstChild) {
@@ -137,10 +119,8 @@ function limparLista() {
   salvarListaNoLocalStorage([]);
 }
 
-// Adiciona o botão "Limpar Lista" ao final do corpo do documento
 document.body.appendChild(btnLimparLista);
 
-// Função para pesquisar na lista
 function pesquisarLista() {
   let termoPesquisa = document
     .getElementById("caixaPesquisa")
@@ -172,7 +152,6 @@ function pesquisarLista() {
   }
 }
 
-// Função para cancelar a pesquisa na lista
 function cancelarPesquisa() {
   let itensLista = document.querySelectorAll("#itemLista li");
 
@@ -187,12 +166,10 @@ function cancelarPesquisa() {
   }
 }
 
-// Adicionar um evento de clique ao botão de pesquisa
 document
   .getElementById("botaoPesquisar")
   .addEventListener("click", pesquisarLista);
 
-// Adicionar um evento de clique ao botão de cancelar pesquisa
 document
   .getElementById("botaoCancelar")
   .addEventListener("click", cancelarPesquisa);
