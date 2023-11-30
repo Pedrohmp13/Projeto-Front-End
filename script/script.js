@@ -10,7 +10,7 @@ function salvarListaNoLocalStorage(lista) {
 }
 
 // Função para adicionar um item à lista na página
-function adicionarItemNaPaginaTarefas(item) {
+function adicionarItemNaPagina(item) {
   let li = document.createElement("li");
   let dateText = document.createTextNode(
     item.data + " - " + item.nome + " - " + item.telefone
@@ -42,7 +42,7 @@ function adicionarItemNaPaginaTarefas(item) {
   li.setAttribute("data-id", item.id);
 
   // Adicionar o item à lista de tarefas na página
-  document.getElementById("itemListaTarefas").appendChild(li);
+  document.getElementById("itemLista").appendChild(li);
 }
 
 // Função para adicionar um botão de fechar a um item existente
@@ -99,7 +99,7 @@ function addElemento() {
   if (inputValue === "") {
     alert("Você precisa descrever o item");
   } else {
-    adicionarItemNaPaginaTarefas(novoItem);
+    adicionarItemNaPagina(novoItem);
   }
 
   // Limpar o campo de entrada após adicionar o item
@@ -113,11 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Adicionar itens da lista ao HTML
   for (let i = 0; i < lista.length; i++) {
-    adicionarItemNaPaginaTarefas(lista[i]);
+    adicionarItemNaPagina(lista[i]);
   }
 
   // Adicionar botão de fechar para os itens iniciais
-  let itensIniciais = document.querySelectorAll("#itemListaTarefas li");
+  let itensIniciais = document.querySelectorAll("#itemLista li");
   itensIniciais.forEach((item) => {
     adicionarBotaoFechar(item, item.getAttribute("data-id"));
   });
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Cria um botão "Limpar Lista" que remove todos os itens da lista
 function limparLista() {
-  let list = document.getElementById("itemListaTarefas");
+  let list = document.getElementById("itemLista");
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
@@ -141,7 +141,7 @@ function pesquisarLista() {
   let termoPesquisa = document
     .getElementById("caixaPesquisa")
     .value.toLowerCase();
-  let itensLista = document.querySelectorAll("#itemListaTarefas li");
+  let itensLista = document.querySelectorAll("#itemLista li");
   let itemNaoEncontrado = true;
 
   itensLista.forEach((item) => {
@@ -161,7 +161,7 @@ function pesquisarLista() {
       .getElementById("itemListaTarefas")
       .appendChild(mensagemNaoEncontrado);
   } else {
-    let mensagemExistente = document.querySelector("#itemListaTarefas p");
+    let mensagemExistente = document.querySelector("#itemLista p");
     if (mensagemExistente) {
       mensagemExistente.remove();
     }
@@ -170,14 +170,14 @@ function pesquisarLista() {
 
 // Função para cancelar a pesquisa na lista
 function cancelarPesquisa() {
-  let itensLista = document.querySelectorAll("#itemListaTarefas li");
+  let itensLista = document.querySelectorAll("#itemLista li");
 
   itensLista.forEach((item) => {
     item.style.display = "block";
   });
 
   document.getElementById("caixaPesquisa").value = "";
-  let mensagemExistente = document.querySelector("#itemListaTarefas p");
+  let mensagemExistente = document.querySelector("#itemLista p");
   if (mensagemExistente) {
     mensagemExistente.remove();
   }
