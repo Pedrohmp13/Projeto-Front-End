@@ -1,12 +1,12 @@
 // Função para obter os dados da lista do localStorage
 function getListaFromLocalStorage() {
-  let lista = JSON.parse(localStorage.getItem("tarefas")) || [];
+  let lista = JSON.parse(localStorage.getItem("contato")) || [];
   return lista;
 }
 
 // Função para salvar a lista no localStorage
 function salvarListaNoLocalStorage(lista) {
-  localStorage.setItem("tarefas", JSON.stringify(lista));
+  localStorage.setItem("contato", JSON.stringify(lista));
 }
 
 // Função para adicionar um item à lista na página
@@ -41,7 +41,7 @@ function adicionarItemNaPagina(item) {
   li.id = "item_" + item.id;
   li.setAttribute("data-id", item.id);
 
-  // Adicionar o item à lista de tarefas na página
+  // Adicionar o item à lista de contato na página
   document.getElementById("itemLista").appendChild(li);
 }
 
@@ -158,7 +158,7 @@ function pesquisarLista() {
     let mensagemNaoEncontrado = document.createElement("p");
     mensagemNaoEncontrado.textContent = "Item não encontrado!!!";
     document
-      .getElementById("itemListaTarefas")
+      .getElementById("itemLista")
       .appendChild(mensagemNaoEncontrado);
   } else {
     let mensagemExistente = document.querySelector("#itemLista p");
