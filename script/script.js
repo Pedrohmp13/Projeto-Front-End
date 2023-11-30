@@ -12,6 +12,7 @@ function salvarListaNoLocalStorage(lista) {
 // Função para adicionar um item à lista na página
 function adicionarItemNaPaginaTarefas(item) {
   let li = document.createElement("li");
+  li.className = "lista-tarefas";
   let dateText = document.createTextNode(
     item.data + " - " + item.nome + " - " + item.telefone
   );
@@ -75,7 +76,10 @@ function addElemento() {
   let dateText = document.createTextNode(
     formattedDate + " - " + nome + " - " + telefone + " - "
   );
-  li.appendChild(dateText);
+  
+  let p = document.createElement("p");
+  p.appendChild(dateText);
+  li.appendChild(p);
   let t = document.createTextNode(inputValue.toUpperCase());
   li.appendChild(t);
 

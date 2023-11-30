@@ -65,14 +65,19 @@
         <p>Educacuca@utfpr.edu.br</p>
       </div>
     </div>
-    <div>
-      <h2>Lista de contato</h2>
+
+    <div id="containerLista">
+      <h2 id="listadeContato">Lista de contato</h2>
       <h3>Aqui será listada as informações de contato enviadas nesta página!</h3>
-      <input type="text" id="caixaPesquisa" placeholder="Pesquisar...">
-      <button id="botaoPesquisar" onclick="pesquisarLista()">Pesquisar</button>
-      <button id="botaoCancelar" onclick="cancelarPesquisa()">Cancelar Pesquisa</button>
+      <div id="barraPesquisa">
+        <input type="text" id="caixaPesquisa" placeholder="Pesquisar...">
+        <button id="botaoPesquisar" onclick="pesquisarLista()">Pesquisar</button>
+        <button id="botaoCancelar" onclick="cancelarPesquisa()">Cancelar Pesquisa</button>
+      </div>
       <ul id="itemListaTarefas"></ul>
-      <button class="clear-button" onclick="limparLista()">Limpar Lista</button>
+      <div id="limpa">
+        <button class="clear-button" onclick="limparLista()">Limpar Lista</button>
+      </div>
     </div>
 
     <script src="../script/script.js"></script>
