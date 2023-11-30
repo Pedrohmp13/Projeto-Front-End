@@ -1,16 +1,16 @@
 // Função para obter os dados da lista do localStorage
 function getListaFromLocalStorage() {
-  let lista = JSON.parse(localStorage.getItem("tarefas")) || [];
+  let lista = JSON.parse(localStorage.getItem("contato")) || [];
   return lista;
 }
 
 // Função para salvar a lista no localStorage
 function salvarListaNoLocalStorage(lista) {
-  localStorage.setItem("tarefas", JSON.stringify(lista));
+  localStorage.setItem("contato", JSON.stringify(lista));
 }
 
 // Função para adicionar um item à lista na página
-function adicionarItemNaPaginaTarefas(item) {
+function adicionarItemNaPagina(item) {
   let li = document.createElement("li");
   li.className = "lista-tarefas";
   let dateText = document.createTextNode(
@@ -42,8 +42,8 @@ function adicionarItemNaPaginaTarefas(item) {
   li.id = "item_" + item.id;
   li.setAttribute("data-id", item.id);
 
-  // Adicionar o item à lista de tarefas na página
-  document.getElementById("itemListaTarefas").appendChild(li);
+  // Adicionar o item à lista de contato na página
+  document.getElementById("itemLista").appendChild(li);
 }
 
 // Função para adicionar um botão de fechar a um item existente
@@ -86,7 +86,7 @@ function addElemento() {
   // Obter a lista atual do localStorage
   let lista = getListaFromLocalStorage();
 
-  // Adicionar a nova tarefa à lista
+  // Adicionar a novo contato à lista
   let novoItem = {
     id: new Date().getTime(),
     descricao: inputValue.toUpperCase(),
@@ -101,12 +101,12 @@ function addElemento() {
 
   // Adicionar o novo item à página
   if (inputValue === "") {
-    alert("Você precisa descrever a tarefa");
+    alert("Você precisa descrever o item");
   } else {
-    adicionarItemNaPaginaTarefas(novoItem);
+    adicionarItemNaPagina(novoItem);
   }
 
-  // Limpar o campo de entrada após adicionar a tarefa
+  // Limpar o campo de entrada após adicionar o item
   document.getElementById("Mensagem").value = "";
 
   return false; // Evita que o formulário seja enviado
@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Adicionar itens da lista ao HTML
   for (let i = 0; i < lista.length; i++) {
-    adicionarItemNaPaginaTarefas(lista[i]);
+    adicionarItemNaPagina(lista[i]);
   }
 
   // Adicionar botão de fechar para os itens iniciais
-  let itensIniciais = document.querySelectorAll("#itemListaTarefas li");
+  let itensIniciais = document.querySelectorAll("#itemLista li");
   itensIniciais.forEach((item) => {
     adicionarBotaoFechar(item, item.getAttribute("data-id"));
   });
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Cria um botão "Limpar Lista" que remove todos os itens da lista
 function limparLista() {
-  let list = document.getElementById("itemListaTarefas");
+  let list = document.getElementById("itemLista");
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
@@ -145,7 +145,7 @@ function pesquisarLista() {
   let termoPesquisa = document
     .getElementById("caixaPesquisa")
     .value.toLowerCase();
-  let itensLista = document.querySelectorAll("#itemListaTarefas li");
+  let itensLista = document.querySelectorAll("#itemLista li");
   let itemNaoEncontrado = true;
 
   itensLista.forEach((item) => {
@@ -162,10 +162,10 @@ function pesquisarLista() {
     let mensagemNaoEncontrado = document.createElement("p");
     mensagemNaoEncontrado.textContent = "Item não encontrado!!!";
     document
-      .getElementById("itemListaTarefas")
+      .getElementById("itemLista")
       .appendChild(mensagemNaoEncontrado);
   } else {
-    let mensagemExistente = document.querySelector("#itemListaTarefas p");
+    let mensagemExistente = document.querySelector("#itemLista p");
     if (mensagemExistente) {
       mensagemExistente.remove();
     }
@@ -174,14 +174,14 @@ function pesquisarLista() {
 
 // Função para cancelar a pesquisa na lista
 function cancelarPesquisa() {
-  let itensLista = document.querySelectorAll("#itemListaTarefas li");
+  let itensLista = document.querySelectorAll("#itemLista li");
 
   itensLista.forEach((item) => {
     item.style.display = "block";
   });
 
   document.getElementById("caixaPesquisa").value = "";
-  let mensagemExistente = document.querySelector("#itemListaTarefas p");
+  let mensagemExistente = document.querySelector("#itemLista p");
   if (mensagemExistente) {
     mensagemExistente.remove();
   }

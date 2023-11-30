@@ -422,7 +422,7 @@ footer h2 {
 }
 
 /* Estilos para a lista */
-ul#itemListaTarefas li {
+ul#itemLista li {
   position: relative;
   background-color: #f2f2f2;
   border: 1px solid black;
@@ -439,7 +439,7 @@ ul#itemListaTarefas p {
   overflow: hidden;
 }
 
-ul#itemListaTarefas li .close {
+ul#itemLista li .close {
   margin-left: auto;
   padding: 4px;
   cursor: pointer;
@@ -448,11 +448,11 @@ ul#itemListaTarefas li .close {
   border: 1px solid #ddd;
 }
 
-ul#itemListaTarefas li .close:hover {
+ul#itemLista li .close:hover {
   background-color: #ddd;
 }
 
-ul#itemListaTarefas li span {
+ul#itemLista li span {
   margin-right: 8px;
 }
 
