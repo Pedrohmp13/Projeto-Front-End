@@ -97,12 +97,12 @@ function addElemento() {
 
   // Adicionar o novo item à página
   if (inputValue === "") {
-    alert("Você precisa descrever a tarefa");
+    alert("Você precisa descrever o item");
   } else {
     adicionarItemNaPaginaTarefas(novoItem);
   }
 
-  // Limpar o campo de entrada após adicionar a tarefa
+  // Limpar o campo de entrada após adicionar o item
   document.getElementById("Mensagem").value = "";
 
   return false; // Evita que o formulário seja enviado
