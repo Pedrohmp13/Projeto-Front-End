@@ -82,7 +82,7 @@ function addElemento() {
   // Obter a lista atual do localStorage
   let lista = getListaFromLocalStorage();
 
-  // Adicionar a nova tarefa à lista
+  // Adicionar a novo contato à lista
   let novoItem = {
     id: new Date().getTime(),
     descricao: inputValue.toUpperCase(),
