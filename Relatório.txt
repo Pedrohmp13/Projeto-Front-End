@@ -1,4 +1,4 @@
-Relatório sobre Projeto 1 de FrontEnd
+Relatório sobre Projeto 2 de FrontEnd
 	Álvaro Henrique Nunes de Lima	- 2142520
 	Lucas Cardinot da Silva			- 2144298
 	Pedro Henrique Mendes de Paula	- 2142708
@@ -8,6 +8,35 @@ Oferecer ferramentas educacionais para vestibulandos, onde através do site pode
 de todos os conteúdos como videoaulas, cursos, exercícios e também informações básicas sobre os assuntos mais frequentes em provas.
 Em cada página do site será possível o vestibulando estudar de maneiras diferentes, estudando através de cursos, de videoaulas, de exercícios, e além disso saber sobre informações
 importantes sobre os vestibulares. Por fim, o usuário poderá entrar em contato através de um formulário escrevendo suas dúvidas e perguntas para os administradores.
+
+As funções foram definidas das seguintes maneiras:
+
+•	getListaFromLocalStorage() Desenvolvido por: Álvaro:
+- Obtém os dados da lista armazenada no localStorage e retorna uma lista vazia se não houver dados armazenados.
+
+•	salvarListaNoLocalStorage() Desenvolvido por: Álvaro:
+- Salva a lista no localStorage convertendo para um JSON.
+
+•	adicionarItemNaPagina() Desenvolvido por: Álvaro:
+- Adiciona um item na lista e cria um elemento com informações de data, nome, telefone e mensagem e adiciona um botão com id único para fechar a cada item, permitindo a remoção do item da lista.
+
+•	adicionarBotaoFechar() Desenvolvido por: Pedro:
+- Adiciona um botão de fechar um item existente na lista onde este botão irá remover o item da lista.
+
+•	addElemento() Desenvolvido por: Pedro:
+- Adiciona um novo item na lista quando clicar no botão incluir. Obtém os valores de entrada do usuário, cria um novo item, o adiciona à lista e atualiza o localStorage e caso o campo de entrada estiver vazio exibe um alerta "Você precisa descrever o item"
+
+•	limparLista() Desenvolvido por: Pedro:
+- Remove todos os itens da lista na página HTML e no localStorage.
+
+•	pesquisarLista() Desenvolvido por: Lucas:
+- Pesquisa na lista o texto inserido na caixa de pesquisa e exibe os itens que correspondem ao texto e oculta os outros. Adiciona uma mensagem se nenhum item for encontrado.
+
+•	cancelarPesquisa() Desenvolvido por: Lucas:
+- Restaura a exibição de todos os itens da lista e limpa a caixa de pesquisa e remove a mensagem de "Item não encontrado" caso houver.
+
+•	limparFormulario() Desenvolvido por: Lucas:
+- Limpa todas as informações escritas nos campos do formulário.
 
 O site possui telas como:
 •	Tela Inicial;
